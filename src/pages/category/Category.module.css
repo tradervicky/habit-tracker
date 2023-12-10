@@ -16,11 +16,12 @@
     flex-direction: column;
     border-radius: 15px;
     gap: 10px;
+    height: 100vh;
     padding-bottom: 20px;
 }
 .UpperMobile{
     background: blue;
-    height: 29vh;
+    height: 34vh;
     border-radius: 0 0 50px 50px;
     text-align: center;
     display: flex;
@@ -107,4 +108,12 @@
 .disPlayIcon{
     display: flex;
     gap: 22px;
+}
+
+.AddedCat{
+    
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+   gap: 15px;
 }

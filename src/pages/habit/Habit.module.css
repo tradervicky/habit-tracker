@@ -1,0 +1,72 @@
+.MainHabit{
+    background-color: gray ;
+   
+}
+.AllDetail{
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: white;
+    
+}
+.userDetail{
+    display: flex;
+    height: 10vh;
+    background-color: blue;
+   justify-content: space-between;
+   border-radius: 0 0 15px 15px;
+   align-items: center;
+   margin-bottom: 5px;
+   padding: 0 15px 0 15px;
+  
+}
+.Username{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.Username span{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.DateFetch{
+    margin-bottom: 20px;
+    padding: 5px 15px 0 15px;
+}
+table {
+    width: 400px;
+    overflow-x: auto; 
+    border-collapse: collapse;
+    display: flex;
+    text-align: center;
+}
+
+th, td {
+    width: 10px;
+    border: 1px solid #ddd;
+    padding: 14px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.displayCat{
+    margin: 0px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 10px;
+    background-color: #f5f5fe;
+    border-radius: 8px;
+    
+}
+.disPlayIcon{
+    display: flex;
+    gap: 22px;
+}

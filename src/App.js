@@ -6,6 +6,7 @@ import './App.css';
 import Category from './pages/category/Category';
 
 import CreateAccount from './pages/CreateAccount';
+import Habit from './pages/habit/Habit';
 import Login from './pages/Login';
 import Success from './pages/Success';
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='/create' element={<CreateAccount/>} />
         <Route path='/' element={<Category/>} />
+        <Route path='/habit' element={<Habit/>} />
       </Routes>
       </BrowserRouter>
     </div>

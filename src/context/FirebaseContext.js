@@ -27,6 +27,12 @@ const putData = (key, data, email, password)=>{
         password: password
     })
 }
+const CreateCategory = (category, icon)=>{
+    set(ref(database, 'category/'),{
+        name: category,
+        icon: icon
+    })
+}
 
 
 // signup function
@@ -60,9 +66,10 @@ const signinEmailPassword = (email, password)=>{
 
 
 
+
 export const FirebaseProvider = (props)=>{
     return(
-        <FirebaseContext.Provider value={{putData,signUpEmailPassword,signinEmailPassword,signUpwithGoogle}}>
+        <FirebaseContext.Provider value={{putData,signUpEmailPassword,signinEmailPassword,signUpwithGoogle, CreateCategory}}>
             {props.children}
         </FirebaseContext.Provider>
     )
