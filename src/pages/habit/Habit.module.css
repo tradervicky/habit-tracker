@@ -70,3 +70,8 @@ th {
     display: flex;
     gap: 22px;
 }
+.pngText{
+    display: flex;
+   align-items: center;
+   gap: 10px;
+}

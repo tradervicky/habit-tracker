@@ -6,9 +6,10 @@ import './App.css';
 import Category from './pages/category/Category';
 
 import CreateAccount from './pages/CreateAccount';
+import Footer from './pages/footer/Footer';
 import Habit from './pages/habit/Habit';
 import Login from './pages/Login';
-import Success from './pages/Success';
+
 
 
 
@@ -28,16 +29,21 @@ function App() {
 
   return (
     <div className="App">
+
       <BrowserRouter>
       <Routes>
         
-        <Route path='/succ' element={<Success/>} />
+       
         <Route path='/login' element={<Login/>} />
         <Route path='/create' element={<CreateAccount/>} />
         <Route path='/' element={<Category/>} />
         <Route path='/habit' element={<Habit/>} />
+        
       </Routes>
+     
       </BrowserRouter>
+      <Footer/>
+
     </div>
   );
 }

@@ -8,15 +8,31 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const firebase = useFirebase();
+  const [uid, setUid] = useState("");
   const navigate = useNavigate()
-const handleLogin = ()=>{
-  firebase.signinEmailPassword(username, password)
-  .then(
-    navigate('/success')
-  ).catch((err)=>
-  console.error(err.messsage)
-  )
-}
+
+
+  const handleLogin = async () => {
+    if (!firebase) {
+      console.error("Firebase object is undefined");
+      return;
+    } 
+    setError(""); 
+    try {
+      const response = await firebase.signinEmailPassword(username, password,setUid);  
+      if (response && response.success) {
+        navigate('/habit');
+      } else {  
+        setError("Authentication failed. Please check your credentials.");
+      }
+    } catch (err) {
+      console.error(err.message);
+      setError("Authentication failed. Please check your credentials.");
+    }
+  };
+  
+
+
 const handleLoginGoogle =()=>{
   firebase.signUpwithGoogle()
 }

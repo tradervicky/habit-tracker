@@ -1,8 +1,18 @@
 import React from "react";
 import styles from "./Habit.module.css";
 import { IoMdLogOut } from "react-icons/io";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function Habit() {
+  const [uid, setUid] =useState("")
+  const imageName = 'bbq.svg';
+  const imagePath = `/svg/${imageName}`;
+ useEffect(()=>{
+  setUid(localStorage.getItem('uid'));
+  
+ },[])
+ 
   return (
     <div className={styles.MainHabit}>
       <div className={styles.AllDetail}>
@@ -23,7 +33,10 @@ function Habit() {
         </div>
         
         <div className={styles.displayCat}>
-          <p>Meditation</p>
+          <div className={styles.pngText}>
+          <img src={imagePath} alt="sexy" style={{width:"30px"}} />
+          <p>  Meditation</p>
+          </div>
           <div className={styles.disPlayIcon}>
           <input type="radio" />
           </div>
