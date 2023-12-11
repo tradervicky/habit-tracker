@@ -14,17 +14,18 @@ function Category() {
   const [selectedIcon, setSelectedIcon] = useState("");
 
   const firebse = useFirebase();
-
+  const uid =  localStorage.getItem("uid")
   // category created
   const CreateCategory = async () => {
-    await firebse.CreateCategory(catname, selectedIcon);
+    await firebse.CreateCategory(catname, selectedIcon,uid);
     const categories = await readAllCategories();
     setCatData(categories);
   };
   const handleIconChange = (e) => {
     setSelectedIcon(e.target.value);
   };
-
+ 
+ 
   // read category
   useEffect(() => {
     const fetchData = async () => {
